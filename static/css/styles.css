@@ -99,6 +99,7 @@ li {
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
   transform: rotate(-2deg);
   position: relative;
+  transition: transform 0.2s ease;
 }
 
 li.completed {
@@ -106,6 +107,13 @@ li.completed {
   color: #2a5934;
   text-decoration: line-through;
   transform: none;
+}
+
+/* Task Buttons Container */
+.task-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 /* Modal */
@@ -130,23 +138,18 @@ li.completed {
   max-width: 400px;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .form-box,
-  .login-container,
-  .register-container,
-  .modal-content {
-    padding: 15px;
-    width: 90%;
-  }
-
   ul {
     flex-direction: column;
-    align-items: center;
+    gap: 15px;
+    padding: 0;
+    align-items: stretch;
   }
 
   li {
-    width: 90%;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
     transform: none !important;
   }
 
@@ -158,4 +161,13 @@ li.completed {
   .task-buttons button {
     width: 100%;
   }
+
+  .form-box,
+  .login-container,
+  .register-container,
+  .modal-content {
+    padding: 15px;
+    width: 90%;
+  }
 }
+
