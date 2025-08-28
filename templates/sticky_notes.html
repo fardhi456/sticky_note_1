@@ -1,0 +1,16 @@
+<h2>Your Sticky Notes</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Note</button>
+</form>
+
+<ul>
+  {% for note in notes %}
+    <li>{{ note.content }} <small>({{ note.created_at }})</small></li>
+  {% empty %}
+    <li>No sticky notes yet.</li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'home' %}">Back to To-Do</a>
