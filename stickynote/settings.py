@@ -11,11 +11,14 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-default-key-for-dev')
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 # Allow all hosts by default (change for production)
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
+
 # ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
 import os
 
 if 'PYTHONANYWHERE_DOMAIN' in os.environ:
-    ALLOWED_HOSTS = ['fardheenkp123.pythonanywhere.com']
+    ALLOWED_HOSTS = ['fardheenkp321.pythonanywhere.com']
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
