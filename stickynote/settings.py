@@ -14,7 +14,7 @@ DEBUG = os.getenv('DEBUG', 'True').lower() in ['true', '1', 'yes']
 import os
 
 if 'PYTHONANYWHERE_DOMAIN' in os.environ:
-    ALLOWED_HOSTS = ['fardheenkp321.pythonanywhere.com']
+    ALLOWED_HOSTS = ['fardheen321.pythonanywhere.com']
 else:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
